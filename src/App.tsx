@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerformanceMonitor } from "@react-three/drei";
 import { useEffect, useState } from "react";
 import { getDevicePixelRatio } from "./utils/useDeviceUtils";
+import R3F from "./R3F/R3F";
 
 function App() {
   const [dpr, setDpr] = useState(getDevicePixelRatio());
@@ -32,10 +33,7 @@ function App() {
         }}
       />
       <OrbitControls />
-      <mesh>
-        <boxGeometry />
-        <meshNormalMaterial />
-      </mesh>
+      <R3F />
     </Canvas>
   );
 }
