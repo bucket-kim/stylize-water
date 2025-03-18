@@ -24,6 +24,8 @@ function App() {
       dpr={dpr}
       frameloop={frameloop}
       gl={{ powerPreference: "high-performance", antialias: true }}
+      camera={{ position: [30, 10, -30], fov: 35 }}
+      shadows
     >
       <PerformanceMonitor
         bounds={() => [30, 500]}
